@@ -1,0 +1,7 @@
+# web2 netlify.toml
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  WEB2_SPECIFIC_FLAG = "web2_true"

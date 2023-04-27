@@ -1,0 +1,7 @@
+# web1 netlify.toml
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  WEB1_SPECIFIC_FLAG = "web1_true"
