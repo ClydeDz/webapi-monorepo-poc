@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v3
     
     - name: Install Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: 18.x
     
@@ -45,4 +45,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: website-files
-        path: build
+        path: ./web/build
