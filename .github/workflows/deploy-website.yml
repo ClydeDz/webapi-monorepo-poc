@@ -19,7 +19,6 @@ jobs:
     steps:
     - name: Download artifact
       uses: dawidd6/action-download-artifact@v2
-        name: website-files
       with:
         path: production-files
         workflow: build-website.yml
