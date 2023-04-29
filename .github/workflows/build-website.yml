@@ -44,5 +44,4 @@ jobs:
     - name: Upload build files
       uses: actions/upload-artifact@v3
       with:
-        name: website-files
         path: ./web/build
