@@ -1,0 +1,9 @@
+{
+    "name": "speaking",
+    "cwd": "./",
+    "src": "portfolio/speaking/",
+    "filePattern": "**/*.md",
+    "dist": "dist/speaking.json",
+    "metadata": false,
+    "deterministicOrder": true
+  }

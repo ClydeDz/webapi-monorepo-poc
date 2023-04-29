@@ -1,0 +1,9 @@
+{
+    "name": "teaching",
+    "cwd": "./",
+    "src": "portfolio/teaching/",
+    "filePattern": "**/*.md",
+    "dist": "dist/teaching.json",
+    "metadata": false,
+    "deterministicOrder": true
+  }

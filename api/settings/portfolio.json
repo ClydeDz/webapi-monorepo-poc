@@ -1,0 +1,9 @@
+{
+    "name": "portfolio",
+    "cwd": "./",
+    "src": "portfolio/",
+    "filePattern": "**/*.md",
+    "dist": "dist/portfolio.json",
+    "metadata": false,
+    "deterministicOrder": true
+  }
