@@ -19,9 +19,9 @@ jobs:
     name: Build website
     runs-on: ubuntu-latest
     defaults:
-    run:
-      shell: bash
-      working-directory: web
+      run:
+        shell: bash
+        working-directory: web
     
     steps:
     - name: Checkout code
