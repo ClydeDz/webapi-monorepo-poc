@@ -26,6 +26,7 @@ jobs:
     - name: Deploy artifacts to a repo
       uses: tagus/git-deploy@v0.4.1
       with:
+        changes: artifact
         repository: git@github.com:clydedz/webdeploy-monorepo-poc.git
         ssh_key: ${{ secrets.REPO_DEPLOY_KEY }}
         name: clydedz
