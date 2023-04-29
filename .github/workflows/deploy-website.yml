@@ -20,14 +20,12 @@ jobs:
     - name: Download artifact
       uses: dawidd6/action-download-artifact@v2
       with:
-        path: production-files
         workflow: build-website.yml
         workflow_conclusion: success
 
     - name: Deploy artifacts to a repo
       uses: tagus/git-deploy@v0.4.1
       with:
-        changes: production-files
         repository: git@github.com:clydedz/webdeploy-monorepo-poc.git
         ssh_key: ${{ secrets.REPO_DEPLOY_KEY }}
         name: clydedz
