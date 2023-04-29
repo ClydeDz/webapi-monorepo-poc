@@ -25,7 +25,7 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
     - name: Install Node.js
       uses: actions/setup-node@v1
@@ -42,7 +42,7 @@ jobs:
       run: npm run test
 
     - name: Upload build files
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: website-files
-        path: ./build
+        path: build
