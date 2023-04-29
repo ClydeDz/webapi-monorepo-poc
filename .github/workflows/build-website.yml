@@ -7,12 +7,14 @@ on:
     paths-ignore:
       - 'api/**'
       - 'web2/**'
+      - 'docs/**'
   pull_request:
     branches:
       - main
     paths-ignore:
       - 'api/**'
       - 'web2/**'
+      - 'docs/**'
 
 jobs:
   build:
