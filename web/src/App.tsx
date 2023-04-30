@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Web1 Edit <code>src/App.tsx</code> and save to reload.
+          Web1 Edit <code>src/App.tsx</code> and save to reload (POC).
         </p>
         <a
           className="App-link"
