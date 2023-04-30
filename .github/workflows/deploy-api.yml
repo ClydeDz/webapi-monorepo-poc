@@ -33,3 +33,4 @@ jobs:
         email: 13506613+ClydeDz@users.noreply.github.com
         clean_repo: true
         branch: main
+        message: "Commit from the monorepo API deploy action"
