@@ -43,4 +43,4 @@ jobs:
     - name: Upload API files
       uses: actions/upload-artifact@v3
       with:
-        path: ./api/dist
+        path: ./api/public

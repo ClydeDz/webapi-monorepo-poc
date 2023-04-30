@@ -3,7 +3,7 @@
     "cwd": "./",
     "src": "portfolio/speaking/",
     "filePattern": "**/*.md",
-    "dist": "dist/speaking.json",
+    "dist": "public/speaking.json",
     "metadata": false,
     "deterministicOrder": true
   }

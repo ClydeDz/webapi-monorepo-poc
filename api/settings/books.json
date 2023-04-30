@@ -3,7 +3,7 @@
     "cwd": "./",
     "src": "portfolio/books/",
     "filePattern": "**/*.md",
-    "dist": "dist/books.json",
+    "dist": "public/books.json",
     "metadata": false,
     "deterministicOrder": true
   }
