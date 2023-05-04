@@ -1,0 +1,11 @@
+{
+  "name": "images-projects",
+  "version": "0.0.1",
+  "author": "Clyde D'Souza",
+  "scripts": {
+    "build": "compress --input \"./public/\" --output \"./dist/\" --debug --print --force --enginepng pngquant"
+  },
+  "devDependencies": {
+    "node-compress-images-cli": "^0.0.4"
+  }
+}
