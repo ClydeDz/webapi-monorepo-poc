@@ -3,9 +3,16 @@
   "version": "0.0.1",
   "author": "Clyde D'Souza",
   "scripts": {
-    "build": "compress --input \"./public/\" --output \"./dist/\" --debug --print --force --enginepng pngquant"
+    "go": "imagemin public/* --out-dir=dist --plugin.mozjpeg.quality=60 --plugin.gifsicle.optimizationLevel=2 --plugin.pngquant.quality=0.5 --plugin.pngquant.quality=0.7",
+    "h": "imagemin --help",
+    "go1": "optimizt --verbose --force --avif --webp .",
+    "build": "compress --input \"./public/\" --output \"./dist/\" --debug --print --force --enginepng pngcrush"
   },
   "devDependencies": {
+    "imagemin-cli": "^7.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "node-compress-images-cli": "^0.0.4"
   }
 }
