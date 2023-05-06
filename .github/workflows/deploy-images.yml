@@ -1,14 +1,14 @@
-name: Deploy api
+name: Deploy images
 
 on:
   workflow_run:
-    workflows: ["Build api"]
+    workflows: ["Build images"]
     branches: [main]
     types: [completed]
 
 jobs:
   deploy:
-    name: Deploy api
+    name: Deploy images
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     defaults:
@@ -19,17 +19,17 @@ jobs:
     - name: Download artifact
       uses: dawidd6/action-download-artifact@v2
       with:
-        workflow: build-api.yml
+        workflow: build-images.yml
         workflow_conclusion: success
 
     - name: Deploy artifacts to a repo
       uses: tagus/git-deploy@v0.4.1
       with:
         changes: artifact
-        repository: git@github.com:clydedz/apideploy-monorepo-poc.git
-        ssh_key: ${{ secrets.REPO_API_DEPLOY_KEY }}
+        repository: git@github.com:clydedz/webdeploy-monorepo-poc.git
+        ssh_key: ${{ secrets.REPO_DEPLOY_KEY }}
         name: clydedz
         email: 13506613+ClydeDz@users.noreply.github.com
         clean_repo: true
-        branch: main
-        message: "Commit from the monorepo API deploy action"
+        branch: gh-pages
+        message: "Commit from the monorepo images deploy action"

@@ -1,0 +1,48 @@
+name: Build images
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'web/**'
+      - 'web2/**'
+      - 'docs/**'
+      - 'api/**'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'web/**'
+      - 'web2/**'
+      - 'docs/**'
+      - 'api/**'
+
+jobs:
+  build:
+    name: Build images
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: images
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+    
+    - name: Install NPM packages
+      run: npm ci
+    
+    - name: Compress images
+      run: npm run go
+
+    - name: Upload image files
+      uses: actions/upload-artifact@v3
+      with:
+        path: ./images/dist
