@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-tesascascThis project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+tesasascscascas cascThis project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
