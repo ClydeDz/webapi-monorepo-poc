@@ -19,7 +19,7 @@ on:
       - 'api/**'
 
 jobs:
-  build:
+  build_images:
     name: Build images
     runs-on: ubuntu-latest
     defaults:

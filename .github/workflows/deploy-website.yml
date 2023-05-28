@@ -7,8 +7,9 @@ on:
     types: [completed]
 
 jobs:
-  deploy:
+  deploy_website:
     name: Deploy website
+    needs: build_website
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     defaults:

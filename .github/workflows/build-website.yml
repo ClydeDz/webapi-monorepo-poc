@@ -19,7 +19,7 @@ on:
       - 'images/**'
 
 jobs:
-  build:
+  build_website:
     name: Build website
     runs-on: ubuntu-latest
     defaults:
