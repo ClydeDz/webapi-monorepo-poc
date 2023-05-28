@@ -1,15 +1,14 @@
 name: Deploy website
 
-on:
-  workflow_run:
-    workflows: ["Build website"]
-    branches: [main]
-    types: [completed]
+on: workflow_dispatch
+  # workflow_run:
+  #   workflows: ["Build website"]
+  #   branches: [main]
+  #   types: [completed]
 
 jobs:
   deploy_website:
     name: Deploy website
-    needs: build_website
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     defaults:
